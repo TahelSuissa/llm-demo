@@ -1,20 +1,16 @@
-[project]
+[tool.poetry]
 name = "llm-demo"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "tahel bieber",email = "tahelbieber@gmail.com"}
-]
+authors = ["tahel bieber <tahelbieber@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "fastapi (>=0.115.12,<0.116.0)",
-    "uvicorn (>=0.34.3,<0.35.0)",
-    "openai (>=1.88.0,<2.0.0)",
-    "python-dotenv (>=1.1.0,<2.0.0)"
-]
 
-[tool.poetry]
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+fastapi = ">=0.115.12,<0.116.0"
+uvicorn = ">=0.34.3,<0.35.0"
+openai = ">=1.88.0,<2.0.0"
+python-dotenv = ">=1.1.0,<2.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.4.0"
