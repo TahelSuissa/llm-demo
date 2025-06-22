@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from app.llm_client import ask_gpt
+from llm_client import ask_gpt
 
 app = FastAPI()
 
