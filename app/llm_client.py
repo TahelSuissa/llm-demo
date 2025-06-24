@@ -1,14 +1,11 @@
-from dotenv import load_dotenv
-load_dotenv()
-
-
-load_dotenv()
+import openai
 import os
-from openai import OpenAI
+from dotenv import load_dotenv
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+load_dotenv()
 
 def ask_gpt(question: str) -> str:
+    client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": question}]
